@@ -1,0 +1,182 @@
+/* ===== BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #F2F2F2;
+  color: #0F0F0F;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #4A90E2;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links li a:hover {
+  color: #4A90E2;
+}
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* ===== HERO ===== */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: #EDEDED;
+}
+.hero h1 {
+  font-size: 2.8rem;
+  color: #4A90E2;
+}
+.hero p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* ===== BOOK GRID ===== */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+.book-item {
+  text-align: center;
+}
+.book-cover {
+  width: 100%;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.book-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.book-cover:hover img {
+  transform: scale(1.05);
+}
+.book-item h3 {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #222;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+
+
+/* ===== TOP CONTACT INFO ===== */
+.top-contact {
+  background-color: #0F0F0F;
+  color: #fff;
+  text-align: center;
+  padding: 8px 10px;
+  font-size: 0.9rem;
+}
+
+
+
+
+@media (max-width: 600px) {
+  .top-contact, .announcement-bar {
+    font-size: 0.75rem;
+    padding: 6px 8px;
+  }
+}
+
+
+/* Top Wrapper to contain both */
+.top-wrapper {
+  width: 100%;
+  background-color: #fff;
+}
+
+/* CONTACT INFO */
+.top-contact {
+  background-color: #0F0F0F;
+  color: #fff;
+  text-align: center;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+}
+
+/* ANNOUNCEMENT SCROLL BAR */
+.announcement-bar {
+  background-color: #4A90E2;
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 6px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.marquee {
+  display: inline-block;
+  animation: scroll-left 15s linear infinite;
+  padding-left: 100%;
+  white-space: nowrap;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
