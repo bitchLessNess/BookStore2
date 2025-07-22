@@ -1,0 +1,38 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f5f5;
+  padding: 20px;
+}
+
+.cart-container {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.book-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.book-card img {
+  width: 100px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+button#clearCart {
+  margin-top: 20px;
+  padding: 10px 18px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}

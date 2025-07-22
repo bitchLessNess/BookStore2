@@ -31,13 +31,37 @@
     <ul class="nav-links">
       <li><a href="#">Home</a></li>
       <li><a href="#">Books</a></li>
+      <a href="cart.html">Cart</a>
       <li><a href="#">Categories</a></li>
+        
+      
+
+
       <li><a href="#">About</a></li>
       <li><a href="#">Contact</a></li>
+       <a href="admin.html">Admin Panel</a>
+      <!-- Add this to nav or top of each page -->
+
+
     </ul>
     <div class="menu-toggle">☰</div>
   </nav>
 
+
+      
+      <nav class="categories">
+      <button data-filter="all">All</button>
+      <button data-filter="Fiction">Fiction</button>
+      <button data-filter="Non-Fiction">Non-Fiction</button>
+      <button data-filter="Self-Help">Self-Help</button>
+      <!-- Add more as needed -->
+    </nav>
+
+
+
+
+
+    
   <!-- HERO SECTION -->
   <header class="hero">
     <h1>Discover Your Next Favorite Book</h1>
@@ -85,6 +109,9 @@
   </div>
     <!-- Add more books -->
   </section>
+  <section class="book-grid" id="bookContainer"></section>
+  <script src="index.js"></script>
+
 
   <script src="script.js"></script>
 </body>

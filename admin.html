@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel - Book Store</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+     <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="admin.html">Admin</a>
+        <a href="cart.html">Cart</a>
+        </nav>
+  <div class="admin-container">
+    <h2>Add New Book</h2>
+    
+       
+
+
+    <!--          Form              -->
+    <form id="bookForm">
+      <label>Book Title:</label>
+      <input type="text" id="title" required />
+
+      <label>Author Name:</label>
+      <input type="text" id="author" required />
+
+      <label>Description:</label>
+      <textarea id="description" required></textarea>
+
+      <label for="category">Category:</label>
+        <select id="category" required>
+        <option value="">Select</option>
+        <option value="Fiction">Fiction</option>
+        <option value="Non-Fiction">Non-Fiction</option>
+        <option value="Self-Help">Self-Help</option>
+        <option value="Biography">Biography</option>
+        <option value="Children">Children</option>
+        <option value="Science">Science</option>
+        </select>
+
+
+      <label>Book Cover:</label>
+      <input type="file" id="cover" accept="image/*" required />
+
+      <button type="submit">Add Book</button>
+    </form>
+
+    <div class="preview">
+      <h3>Preview:</h3>
+      <div id="previewCard" class="book-card hidden"></div>
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
